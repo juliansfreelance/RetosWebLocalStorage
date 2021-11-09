@@ -48,10 +48,9 @@ function getDataStorage(page) {
     }
 }
 
-
 function closeSession() {
-
-
+    localStorage.clear();
+    window.location.assign('index.html');
 }
 
 function setUp(page, action) {
@@ -93,11 +92,18 @@ function setUp(page, action) {
                                             '<a href="login.html" class="btn btn-primary">Ingresar</a>'+
                                         '</div>'+
                                     '</div >'+
-                                '</div >';
+                                '</div>';
                 break;
             case 'registro':
                 nav.innerHTML += '<li class="nav-item"><a class="nav-link link-light" href="login.html">LogIn</a></li>';
                 break;
+            case 'home':
+                window.location.assign('index.html');
+                break;
+            case 'update':
+                window.location.assign('index.html');
+                break;
+
         }
     }
 }

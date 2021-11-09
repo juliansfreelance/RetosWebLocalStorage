@@ -40,9 +40,13 @@
   </header>
 
   <main class="flex-shrink-0">
-    <div class="container mt-5">
+    <div class="container mt-5" style="max-width: 600px;">
       <div class="row bg-white shadow bg-white rounded">
-        <h2 class="p-2 text-primary bg-primary text-white m-0 rounded-top text-center">Ingreso</h2>
+        <h2 class="p-2 bg-primary text-white m-0 rounded-top d-grid gap-2 d-flex justify-content-between">
+          <i class="bi bi-arrow-left" onclick="window.history.back()"></i>
+          <span class="text-center">LogIn</span>
+          <span></span>
+        </h2>
         <form id="form_login" onsubmit="getData(this.id,event)">
 
           <div class="row mt-3">
@@ -59,13 +63,6 @@
                 <button class="btn btn-outline-secondary" type="button" id="button-addon2"><i class="bi bi-eye-slash"></i></button>
               </div>
             </div>
-
-            <!-- <div class="col-12 mb-3">
-              <div class="form-check">
-                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                <label class="form-check-label" for="exampleCheck1">Recordarme</label>
-              </div>
-            </div> -->
           </div>
 
           <div class="row bg-dark rounded-bottom">

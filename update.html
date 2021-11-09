@@ -25,7 +25,7 @@
     <header>
         <nav class="navbar navbar-dark fixed-top bg-dark">
             <div class="container-fluid">
-                <a class="navbar-brand disabled">Retos web | Registro</a>
+                <a class="navbar-brand disabled">Retos web | Actualizar</a>
                 <ul class="nav justify-content-end" id="navbarColor01">
                     <li class="nav-item">
                         <a class="nav-link link-light" href="index.html">Inicio</a>
@@ -41,7 +41,7 @@
             <div class="row bg-white shadow bg-white rounded">
                 <h2 class="p-2 bg-primary text-white m-0 rounded-top d-grid gap-2 d-flex justify-content-between">
                     <i class="bi bi-arrow-left" onclick="window.history.back()"></i>
-                    <span class="text-center">Registro</span>
+                    <span class="text-center">Actualización</span>
                     <span></span>
                 </h2>
                 <form id="form_login" onsubmit="getData(this.id,event)">
@@ -90,10 +90,9 @@
                     </div>
                     <div class="row justify-content-end bg-dark rounded-bottom">
                         <div class="col d-grid gap-2 d-flex justify-content-end my-2">
-                            <a class="btn btn-dark" href="login.html">LogIn</a>
                             <button type="submit" class="btn btn-primary">
                                 <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
-                                Registrarme
+                                Actualizar
                             </button>
 
                         </div>
@@ -119,7 +118,7 @@
     <script src="js/localStorage.js"></script>
     <script>
         window.onload = function () {
-            getDataStorage('registro');
+            getDataStorage('update');
         }
     </script>
 

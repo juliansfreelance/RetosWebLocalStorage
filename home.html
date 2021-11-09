@@ -38,26 +38,27 @@
   </header>
 
   <main class="flex-shrink-0">
-    <div class="container mt-5">
+    <div class="container mt-5" style="max-width: 700px;">
       <div class="row gx-3 gy-3">
 
         <div class="col-12">
           <div class="card">
             <div class="card-body">
-              <h5 class="card-title">Bienvenido, <span>nombre</span></h5>
-              <div class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis, consectetur rerum nesciunt eum necessitatibus magnam?</div>
+              <h5 class="card-title">Bienvenido, <span class="fw-normal">nombre</span></h5>
+              <!-- <div class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis, consectetur rerum nesciunt eum necessitatibus magnam?</div> -->
             </div>
             <ul class="list-group list-group-flush">
               <li class="list-group-item fw-bolder">Nombre: <span class="fw-normal"></span></li>
               <li class="list-group-item fw-bolder">Apellido: <span class="fw-normal"></span></li>
+              <li class="list-group-item fw-bolder">Correo: <span class="fw-normal"></span></li>
               <li class="list-group-item fw-bolder">Teléfono: <span class="fw-normal"></span></li>
               <li class="list-group-item fw-bolder">Registro: <span class="fw-normal"></span></li>
               <li class="list-group-item fw-bolder">Actualización: <span class="fw-normal"></span></li>
             </ul>
             <div class="card-body bg-light rounded-bottom">
               <div class="col d-grid gap-2 d-flex justify-content-end ">
-                <a href="index.html" class="btn btn-dark">Inicio</a>
-                <a href="#" class="btn btn-danger">Cerrar Sesión</a>
+                <a href="update.html" class="btn btn-dark">Actualizar</a>
+                <a onclick="closeSession()" class="btn btn-danger">Cerrar Sesión</a>
             </div>
             </div>
           </div>
