@@ -1,48 +1,92 @@
 <!doctype html>
-<html lang="en">
-  <head>
-    <title>Local Storage</title>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<html lang="es" class="h-100">
 
-    <!-- Bootstrap CSS v5.0.2 -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"  integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="author" href="https://github.com/juliansfreelance" email="juliansfreelance@gmail.com"
+    content="Julio Cesar Calderón Garcia - Desarrollador y Diseñador Web">
+  <meta name="description" content="reto desarrollo web, construcción loguin guardando variables en local storage">
+  <title>Retos | Local Storage</title>
 
-  </head>
-  <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <!-- Bootstrap CSS v5.0.2 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <style>
+    main>.container {
+      padding: 60px 15px 0;
+    }
+  </style>
+</head>
+
+<body class="d-flex flex-column h-100 bg-light">
+  <header>
+    <nav class="navbar navbar-dark fixed-top bg-dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">Home</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Salir</a>
-            </li>
-          </ul>
-        </div>
+        <a class="navbar-brand disabled">Retos web | Perfil</a>
+        <ul class="nav justify-content-end" id="navbarColor01">
+          <li class="nav-item">
+            <a class="nav-link link-light" href="index.html">Inicio</a>
+          </li>
+          <li class="nav-item nav-login visually-hidden">
+            <a class="nav-link link-light" href="#">Salir</a>
+          </li>
+        </ul>
       </div>
     </nav>
-      <div class="container">
-          <div class="row">
-              <div>
-                <h1>Bienvenido <strong><p id="userEmail"></p></strong></h1>
-              </div>
+  </header>
+
+  <main class="flex-shrink-0">
+    <div class="container mt-5">
+      <div class="row gx-3 gy-3">
+
+        <div class="col-12">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Bienvenido, <span>nombre</span></h5>
+              <div class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis, consectetur rerum nesciunt eum necessitatibus magnam?</div>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item fw-bolder">Nombre: <span class="fw-normal"></span></li>
+              <li class="list-group-item fw-bolder">Apellido: <span class="fw-normal"></span></li>
+              <li class="list-group-item fw-bolder">Teléfono: <span class="fw-normal"></span></li>
+              <li class="list-group-item fw-bolder">Registro: <span class="fw-normal"></span></li>
+              <li class="list-group-item fw-bolder">Actualización: <span class="fw-normal"></span></li>
+            </ul>
+            <div class="card-body bg-light rounded-bottom">
+              <div class="col d-grid gap-2 d-flex justify-content-end ">
+                <a href="index.html" class="btn btn-dark">Inicio</a>
+                <a href="#" class="btn btn-danger">Cerrar Sesión</a>
+            </div>
+            </div>
           </div>
+        </div>
 
       </div>
+    </div>
+  </main>
 
-    <!-- Bootstrap JavaScript Libraries -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
-    <script src="js/localStorage.js" ></script>
-    <script>
-    </script>
+  <footer class="footer mt-auto py-3 bg-dark">
+    <div class="container-fluid">
+      <span class="text-muted">RetosWeb: LocalStorage | Julio Calderón</span>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+    integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+    integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+    crossorigin="anonymous"></script>
+  <script src="js/localStorage.js"></script>
+  <script>
+    window.onload = function () {
+      getDataStorage('home');
+    }
+  </script>
+
 </body>
+
 </html>

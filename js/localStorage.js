@@ -38,16 +38,13 @@ function sedDataStorage(arrayData){
 
 }
 
-function getDataStorage(){
-    var pages="";
-    if(typeof(Storage)!=="undefined"){
-
-        if(localStorage.getItem('email')){
-            pages="home.html";
+function getDataStorage(page) {
+    if(typeof(Storage)!=="undefined") {
+        if (localStorage.getItem('correo') && localStorage.getItem('hash')) {
+            setUp(page, true);
         }else{
-            pages="login.html";
+            setUp(page, false);
         }
-    window.location.assign(pages);
     }
 }
 
@@ -55,4 +52,52 @@ function getDataStorage(){
 function closeSession() {
 
 
+}
+
+function setUp(page, action) {
+    const nav = document.querySelector('.nav');
+    const menu = document.querySelector('.contenidos');
+    if (action) {
+        switch (page) {
+            case 'index':
+                nav.innerHTML += '<li class="nav-item"><a class="nav-link link-light" href="home.html">Perfil</a></li>';
+                menu.innerHTML += '<div class="col-lg-6">' +
+                                    '<div class="card">' +
+                                        '<div class="card-body">' +
+                                            '<h5 class="card-title">Perfil</h5>' +
+                                            '<p class="card-text">Ya iniciaste seción anteriormente puedes ingresar automaticamente gracias a los datos en el localStorage, o cerrar sección desde aquí.</p>' +
+                                            '<div class="d-grid gap-2 d-flex justify-content-start">' +
+                                                '<a href="#" class="btn btn-danger">Cerrar Sesión</a>' +
+                                                '<a href="home.html" class="btn btn-primary">Ir al Perfil</a>' +
+                                            '</div>' +
+                                        '</div>' +
+                                    '</div >' +
+                                '</div >';
+                break;
+            case 'registro':
+                nav.innerHTML += '<li class="nav-item"><a class="nav-link link-light" href="home.html">Perfil</a></li>';
+                break;
+            case 'login':
+                window.location.assign('home.html');
+                break
+        }
+    } else {
+        switch (page) {
+            case 'index':
+                nav.innerHTML += '<li class="nav-item"><a class="nav-link link-light" href="login.html">LogIn</a></li>';
+                menu.innerHTML += '<div class="col-lg-6">'+
+                                    '<div class="card">'+
+                                        '<div class="card-body">'+
+                                            '<h5 class="card-title">Ingresar</h5>'+
+                                            '<p class="card-text">Ingresa tus credenciales para solicitar acceso a la base de datos mediante Ajax y guardar información en el localStorage.</p>' +
+                                            '<a href="login.html" class="btn btn-primary">Ingresar</a>'+
+                                        '</div>'+
+                                    '</div >'+
+                                '</div >';
+                break;
+            case 'registro':
+                nav.innerHTML += '<li class="nav-item"><a class="nav-link link-light" href="login.html">LogIn</a></li>';
+                break;
+        }
+    }
 }
